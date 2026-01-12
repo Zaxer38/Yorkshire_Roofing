@@ -75,27 +75,6 @@ const Stars = styled.div`
   margin: 0.5rem 0;
 `;
 
-const testimonials = [
-  {
-    id: 1,
-    text: "Yorkshire Roofing did an excellent job on our roof replacement. The team was professional, efficient, and left the site spotless.",
-    author: "Sarah Johnson",
-    rating: 5
-  },
-  {
-    id: 2,
-    text: "Quick response to our emergency roof repair. The service was top-notch and the pricing was very fair. Highly recommended!",
-    author: "Michael Brown",
-    rating: 5
-  },
-  {
-    id: 3,
-    text: "We've used Yorkshire Roofing for both our home and business properties. Consistent quality and excellent customer service every time.",
-    author: "Emma Wilson",
-    rating: 5
-  }
-];
-
 const StarRating: React.FC<{ rating: number }> = ({ rating }) => {
   return (
     <>
@@ -127,13 +106,6 @@ const Testimonials: React.FC = () => {
       rating: 5
     }
   ];
-
-  const renderStars = (rating: number) => {
-    return Array(5).fill(0).map((_, i) => (
-      <FaStar key={i} style={{ color: i < rating ? colors.primary : '#ddd' }} />
-    ));
-  };
-
   return (
     <TestimonialsSection>
       <SectionTitle>What Our Customers Say</SectionTitle>

@@ -243,17 +243,6 @@ const ContactDetails = styled.div`
   line-height: 1.6;
 `;
 
-const DetailHeading = styled.h3`
-  font-size: 1.1rem;
-  margin-bottom: 0.4rem;
-  margin-top: 1rem;
-  color: ${colors.lightText};
-`;
-
-const DetailItem = styled.p`
-  margin: 0.15rem 0;
-`;
-
 const MapWrapper = styled.div`
   width: 100%;
   height: 100%;
