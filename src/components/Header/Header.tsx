@@ -83,10 +83,8 @@ const HeaderContent = styled.div`
   }
 
   @media (max-width: 480px) {
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 0 0.75rem 0.5rem;
+    /* keep row layout to avoid tall header */
+    padding: 0 0.75rem;
   }
 `;
 
@@ -112,7 +110,7 @@ const Logo = styled(Link)`
 
   @media (max-width: 480px) {
     img {
-      height: 64px;
+      height: 56px;
     }
   }
 
@@ -146,11 +144,14 @@ const Nav = styled.nav<{ $open: boolean }>`
   @media (max-width: 768px) {
     display: ${props => (props.$open ? 'flex' : 'none')};
     flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
     width: 100%;
     background-color: #2c3e50;
-    padding: 0.5rem 0 1rem;
+    padding: 0.75rem 0 1rem;
     gap: 0.75rem;
-    order: 3;
+    z-index: 999;
   }
 
   @media (max-width: 600px) {
