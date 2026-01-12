@@ -56,11 +56,14 @@ const HeaderContainer = styled.header`
 `;
 
 const MainHeader = styled.div`
-  height: 72px; /* slim header height */
+  height: 80px; /* allows room for logo and nav */
 
   @media (max-width: 768px) {
-    /* slightly shorter header on smaller screens */
-    height: 64px;
+    height: 72px;
+  }
+
+  @media (max-width: 480px) {
+    height: auto; /* let content define height on very small screens */
   }
 `;
 
@@ -81,7 +84,8 @@ const HeaderContent = styled.div`
   @media (max-width: 480px) {
     flex-direction: column;
     justify-content: center;
-    padding: 0 0.75rem;
+    align-items: center;
+    padding: 0 0.75rem 0.5rem;
   }
 `;
 
@@ -89,30 +93,25 @@ const Logo = styled(Link)`
   display: flex;
   align-items: center;
   gap: 0; /* no gap since we're only showing the image */
-  margin-top: 16px; /* moves the logo further down inside the header */
   text-decoration: none;
   color: ${colors.primary};
   transition: color 0.3s ease;
 
   img {
-    height: 150px; /* restored larger logo size */
+    height: 100px;
     width: auto;
     display: block;
   }
 
   @media (max-width: 768px) {
-    margin-top: 10px;
-
     img {
-      height: 110px;
+      height: 80px;
     }
   }
 
   @media (max-width: 480px) {
-    margin-top: 6px;
-
     img {
-      height: 90px;
+      height: 64px;
     }
   }
 
@@ -125,6 +124,16 @@ const Nav = styled.nav`
   display: flex;
   gap: 2rem;
   align-items: center;
+
+  @media (max-width: 768px) {
+    gap: 1.25rem;
+  }
+
+  @media (max-width: 600px) {
+    flex-wrap: wrap;
+    justify-content: center;
+    row-gap: 0.5rem;
+  }
 `;
 
 const NavLink = styled(Link)`
@@ -157,6 +166,15 @@ const NavLink = styled(Link)`
   &:hover::after {
     width: 100%;
   }
+
+  @media (max-width: 768px) {
+    font-size: 0.8rem;
+    padding: 0.35rem 0;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 0.78rem;
+  }
 `;
 
 const ContactButton = styled(Link)`
@@ -178,6 +196,16 @@ const ContactButton = styled(Link)`
     color: #f5f5f5; /* Slightly lighter white on hover */
     transform: translateY(-2px);
     box-shadow: 0 4px 12px rgba(1, 171, 245, 0.3);
+  }
+
+  @media (max-width: 768px) {
+    padding: 0.6rem 1.25rem;
+    font-size: 0.78rem;
+  }
+
+  @media (max-width: 480px) {
+    padding: 0.55rem 1.1rem;
+    font-size: 0.75rem;
   }
 `;
 
