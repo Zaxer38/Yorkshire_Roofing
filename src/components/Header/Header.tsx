@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
+import { FaBars } from 'react-icons/fa';
 import { colors } from '../../theme/colors';
 
 const TopContactBar = styled.div`
@@ -120,13 +121,36 @@ const Logo = styled(Link)`
   }
 `;
 
-const Nav = styled.nav`
+const MobileToggle = styled.button`
+  display: none;
+  background: none;
+  border: none;
+  color: #ffffff;
+  font-size: 1.6rem;
+  cursor: pointer;
+
+  @media (max-width: 768px) {
+    display: block;
+  }
+`;
+
+const Nav = styled.nav<{ $open: boolean }>`
   display: flex;
   gap: 2rem;
   align-items: center;
 
   @media (max-width: 768px) {
     gap: 1.25rem;
+  }
+
+  @media (max-width: 768px) {
+    display: ${props => (props.$open ? 'flex' : 'none')};
+    flex-direction: column;
+    width: 100%;
+    background-color: #2c3e50;
+    padding: 0.5rem 0 1rem;
+    gap: 0.75rem;
+    order: 3;
   }
 
   @media (max-width: 600px) {
@@ -210,6 +234,10 @@ const ContactButton = styled(Link)`
 `;
 
 const Header: React.FC = () => {
+  const [mobileOpen, setMobileOpen] = useState(false);
+
+  const toggleMobileMenu = () => setMobileOpen((prev) => !prev);
+
   return (
     <HeaderContainer>
       <TopContactBar>
@@ -227,7 +255,10 @@ const Header: React.FC = () => {
           <Logo to="/">
             <img src="/header-logo.png" alt="Yorkshire Roofing logo" />
           </Logo>
-          <Nav>
+          <MobileToggle onClick={toggleMobileMenu} aria-label="Toggle navigation">
+            <FaBars />
+          </MobileToggle>
+          <Nav $open={mobileOpen}>
             <NavLink to="/">Home</NavLink>
             <NavLink to="/residential">Residential</NavLink>
             <NavLink to="/commercial">Commercial</NavLink>
