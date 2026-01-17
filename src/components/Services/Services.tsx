@@ -98,7 +98,7 @@ const services: ServiceItem[] = [
   },
   {
     icon: <FaTools size={24} />,
-    title: 'Roof Repairs',
+    title: 'Roof Repairs and Renewal',
     description: 'Fast and reliable repair services for all types of roofing issues.',
     link: '/roof-repairs'
   },
