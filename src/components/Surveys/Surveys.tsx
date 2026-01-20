@@ -101,11 +101,6 @@ const HighlightBox = styled.div`
   box-shadow: 0 16px 40px rgba(0, 0, 0, 0.45);
 `;
 
-const Strong = styled.span`
-  font-weight: 600;
-  color: ${colors.lightText};
-`;
-
 const Surveys: React.FC = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
