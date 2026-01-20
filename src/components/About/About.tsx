@@ -4,19 +4,45 @@ import { colors } from '../../theme/colors';
 import Footer from '../Footer/Footer';
 
 const Banner = styled.section`
-  background-color: #020617;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.7)), url('/Yorkshire_Roofing_Banner.png');
-  background-size: cover;
-  background-position: left center;
-  background-repeat: no-repeat;
-  padding: 5rem 2rem 3rem;
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 1.5rem 5rem;
+  background: radial-gradient(circle at top, #1f2933 0%, #050505 55%, #020617 100%);
+`;
+
+const BannerContent = styled.div`
+  max-width: 900px;
   text-align: center;
-  border-bottom: 1px solid #1f2933;
+  color: #ffffff;
+`;
+
+const BannerEyebrow = styled.p`
+  font-size: 0.85rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: ${colors.lightText};
+  margin-bottom: 1rem;
 `;
 
 const BannerTitle = styled.h1`
   font-size: 3rem;
+  line-height: 1.1;
+  font-weight: 800;
+  margin-bottom: 1.5rem;
   color: ${colors.lightText};
+
+  @media (min-width: 768px) {
+    font-size: 3.5rem;
+  }
+`;
+
+const BannerSubtitle = styled.p`
+  max-width: 640px;
+  margin: 0 auto;
+  font-size: 1.05rem;
+  color: ${colors.text};
 `;
 
 const PageWrapper = styled.main`
@@ -166,7 +192,14 @@ const About: React.FC = () => {
   return (
     <>
       <Banner>
-        <BannerTitle>About Us</BannerTitle>
+        <BannerContent>
+          <BannerEyebrow>ABOUT YORKSHIRE ROOFING</BannerEyebrow>
+          <BannerTitle>About Yorkshire Roofing.</BannerTitle>
+          <BannerSubtitle>
+            Local roofing specialists providing repairs, maintenance and new installations for homes and
+            businesses across Leeds and the wider Yorkshire area.
+          </BannerSubtitle>
+        </BannerContent>
       </Banner>
 
       <PageWrapper>

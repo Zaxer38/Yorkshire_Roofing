@@ -133,8 +133,8 @@ const Hero: React.FC = () => {
           <br />
           Emergency Roofing Services Available
         </HeroSubtitle>
-        
-        <CtaButton to="/get-a-quote">Get a Free Quote</CtaButton>
+
+        <CtaButton to="/contact">Get a Free Quote</CtaButton>
       </HeroContent>
     </HeroSection>
   );

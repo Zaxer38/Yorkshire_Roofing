@@ -1,19 +1,61 @@
 import React, { useEffect } from 'react';
+import HomeContact from '../Contact/HomeContact';
 import styled from 'styled-components';
 import { colors } from '../../theme/colors';
+
+const HeroSection = styled.section`
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 1.5rem 5rem;
+  background: radial-gradient(circle at top, #1f2933 0%, #050505 55%, #020617 100%);
+`;
+
+const HeroInner = styled.div`
+  max-width: 900px;
+  text-align: center;
+  color: #ffffff;
+`;
+
+const HeroEyebrow = styled.p`
+  font-size: 0.85rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: ${colors.lightText};
+  margin-bottom: 1rem;
+`;
+
+const HeroTitle = styled.h1`
+  font-size: 3rem;
+  line-height: 1.1;
+  font-weight: 800;
+  margin-bottom: 1.5rem;
+
+  @media (min-width: 768px) {
+    font-size: 3.75rem;
+  }
+`;
+
+const HeroSubtitle = styled.p`
+  max-width: 640px;
+  margin: 0 auto 2.5rem;
+  font-size: 1.05rem;
+  color: ${colors.text};
+`;
 
 const PageWrapper = styled.section`
   max-width: 1200px;
   margin: 0 auto;
-  padding: 5rem 2rem 4rem;
+  padding: 4rem 2rem 4rem;
   color: #ffffff;
 
   @media (max-width: 768px) {
-    padding: 4rem 1.5rem 3rem;
+    padding: 3.5rem 1.5rem 3rem;
   }
 
   @media (max-width: 480px) {
-    padding: 3.5rem 1.25rem 2.5rem;
+    padding: 3rem 1.25rem 2.5rem;
   }
 `;
 
@@ -54,8 +96,20 @@ const RoofRepairs: React.FC = () => {
   }, []);
 
   return (
-    <PageWrapper>
-      <Title>Roof Repairs Leeds</Title>
+    <>
+      <HeroSection>
+        <HeroInner>
+          <HeroEyebrow>REPAIR, RENEW, PROTECT</HeroEyebrow>
+          <HeroTitle>Roof Repairs and Renewals.</HeroTitle>
+          <HeroSubtitle>
+            Fast, professional roof repairs and renewals across Leeds and Yorkshire, from minor leaks to major
+            storm damage.
+          </HeroSubtitle>
+        </HeroInner>
+      </HeroSection>
+
+      <PageWrapper>
+      <Title>Roof Repairs and Renewals</Title>
 
       <Paragraph>
         Yorkshire weather can be tough on roofs. Our Leeds-based team provides fast, professional roof
@@ -179,13 +233,37 @@ const RoofRepairs: React.FC = () => {
         moss removal.
       </Paragraph>
 
-      <SubTitle>Contact Us About Roof Repairs</SubTitle>
+      <HomeContact />
+{/* Removed inline form; using shared HomeContact component for consistency */}
       <Paragraph>
         If you&apos;ve spotted any of the signs above or are worried about the condition of your roof, contact
         Yorkshire Roofing today for a free, no-obligation roof repair quote. We&apos;ll arrange a visit, assess
         the roof and talk you through the best options to protect your property.
       </Paragraph>
+
+      {/*
+        <FullWidth>
+          <Label htmlFor="name">Name</Label>
+          <Input id="name" name="name" type="text" required />
+        </FullWidth>
+        <FullWidth>
+          <Label htmlFor="email">Email</Label>
+          <Input id="email" name="email" type="email" required />
+        </FullWidth>
+        <FullWidth>
+          <Label htmlFor="phone">Phone</Label>
+          <Input id="phone" name="phone" type="tel" />
+        </FullWidth>
+        <FullWidth>
+          <Label htmlFor="message">Message</Label>
+          <TextArea id="message" name="message" />
+        </FullWidth>
+        <FullWidth>
+          <SubmitButton type="submit">Send Enquiry</SubmitButton>
+        </FullWidth>
+      */}
     </PageWrapper>
+    </>
   );
 };
 

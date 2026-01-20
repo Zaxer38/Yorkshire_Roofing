@@ -106,13 +106,13 @@ const services: ServiceItem[] = [
     icon: <FaShieldAlt size={24} />,
     title: 'Roof Maintenance',
     description: 'Regular maintenance to extend the life of your roof.',
-    link: '/services/maintenance'
+    link: '/roof-maintenance'
   },
   {
     icon: <FaClock size={24} />,
     title: '24/7 Emergency',
-    description: 'Round-the-clock emergency roofing services when you need them most.',
-    link: '/emergency'
+    description: 'Round-the-clock emergency call-outs for leaks, storm damage and urgent roof issues.',
+    link: '/emergency-roofing'
   },
   {
     icon: <FaPoundSign size={24} />,

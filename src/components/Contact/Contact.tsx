@@ -9,8 +9,11 @@ const ContactSection = styled.section`
 `;
 
 const Hero = styled.section`
-  background-color: #020617;
-  padding: 6rem 2rem 6rem;
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  padding: 4rem 2rem 5rem;
+  background: radial-gradient(circle at top, #1f2933 0%, #050505 55%, #020617 100%);
 `;
 
 const HeroInner = styled.div`

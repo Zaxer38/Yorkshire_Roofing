@@ -11,7 +11,11 @@ import Footer from './components/Footer/Footer';
 import About from './components/About/About';
 import Residential from './components/Residential/Residential';
 import Commercial from './components/Commercial/Commercial';
+import FAQ from './components/FAQ/FAQ';
+import RoofMaintenance from './components/RoofMaintenance/RoofMaintenance';
 import RoofRepairs from './components/RoofRepairs/RoofRepairs';
+import Emergency from './components/Emergency/Emergency';
+import Surveys from './components/Surveys/Surveys';
 
 const AppContainer = styled.div`
   font-family: 'Arial', sans-serif;
@@ -72,9 +76,33 @@ function App() {
                 <Footer />
               </>
             } />
+            <Route path="/emergency-roofing" element={
+              <>
+                <Emergency />
+                <Footer />
+              </>
+            } />
             <Route path="/contact" element={
               <>
                 <Contact />
+                <Footer />
+              </>
+            } />
+            <Route path="/faqs" element={
+              <>
+                <FAQ />
+                <Footer />
+              </>
+            } />
+            <Route path="/surveys-consultancy" element={
+              <>
+                <Surveys />
+                <Footer />
+              </>
+            } />
+            <Route path="/roof-maintenance" element={
+              <>
+                <RoofMaintenance />
                 <Footer />
               </>
             } />

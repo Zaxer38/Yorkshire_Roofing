@@ -398,11 +398,11 @@ const Residential: React.FC = () => {
     <PageWrapper>
       <HeroSection>
         <HeroInner>
-          <HeroEyebrow>YOUR HOME, OUR COMMITMENT</HeroEyebrow>
-          <HeroTitle>Residential Roofing by awais.</HeroTitle>
+          <HeroEyebrow>RESIDENTIAL ROOFING SPECIALISTS</HeroEyebrow>
+          <HeroTitle>High-Quality Roofing for Homes Across Yorkshire.</HeroTitle>
           <HeroSubtitle>
-            Protect your biggest investment with certified, durable, and aesthetically superior roofing
-            services.
+            Professional installation, repairs and maintenance for tiled, slate and flat roofs, delivered with
+            care, clear communication and dependable workmanship.
           </HeroSubtitle>
 
           <HeroButtons>

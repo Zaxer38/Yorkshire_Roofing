@@ -265,7 +265,7 @@ const Header: React.FC = () => {
             <NavLink to="/commercial">Commercial</NavLink>
             <NavLink to="/about">About</NavLink>
             <NavLink to="/contact">Contact</NavLink>
-            <ContactButton to="/get-a-quote">Get a Quote</ContactButton>
+            <ContactButton to="/contact">Get a Quote</ContactButton>
           </Nav>
         </HeaderContent>
       </MainHeader>
